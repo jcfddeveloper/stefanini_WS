@@ -28,8 +28,8 @@ import co.com.jcfd.pruebaRest.repository.PersonaDTO;
 import co.com.jcfd.pruebaRest.service.IPersonaService;
 
 @RestController
-@RequestMapping("persona")
 @CrossOrigin
+@RequestMapping("api/persona")
 public class PersonaController {
 
 	@Autowired
@@ -58,6 +58,7 @@ public class PersonaController {
 	}
 
 	@PutMapping()
+	@CrossOrigin
 	public PersonaDTO modificarPersona(@Valid @RequestBody PersonaDTO persona) throws Exception {
 
 		if (persona.getCodigo() == null) {
